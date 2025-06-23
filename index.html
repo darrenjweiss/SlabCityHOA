@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slab City HOA - The Last Regulated Place on Earth</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Light gray background */
+            color: #2d3748; /* Dark gray text */
+        }
+        .section {
+            padding-top: 80px; /* Offset for fixed header */
+            margin-top: -80px; /* Compensate for padding-top to keep content aligned */
+        }
+        .nav-link.active {
+            font-weight: bold;
+            color: #a0aec0; /* Lighter gray for active state */
+            border-bottom: 2px solid #a0aec0;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cbd5e0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a0aec0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Fixed Header / Navigation Bar -->
+    <header class="bg-gray-800 text-white p-4 fixed w-full z-10 shadow-md rounded-b-lg">
+        <nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-2xl font-bold mb-2 sm:mb-0">
+                Slab City HOA
+            </div>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a></li>
+                <li><a href="#about" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a></li>
+                <li><a href="#rules" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a></li>
+                <li><a href="#services" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a></li>
+                <li><a href="#contact" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-20"> <!-- Padding to push content below the fixed header -->
+
+        <!-- Home Section -->
+        <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-20 px-4 min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-4xl mx-auto p-8 bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    Welcome to the Slab City Homeowners Association
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8">
+                    Bringing structure, harmony, and *slightly* enforced guidelines to "The Last Free Place."
+                </p>
+                <div class="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden border-4 border-gray-300">
+                    <img src="https://placehold.co/800x450/e0e0e0/555555?text=Future+of+Slab+City+HOA+Gate" alt="Conceptual image of Slab City HOA gate" class="w-full h-auto object-cover rounded-md">
+                    <p class="text-sm text-gray-500 p-2 italic">A conceptual rendering of your future, more organized, entrance.</p>
+                </div>
+                <p class="text-lg text-gray-700 mt-8">
+                    We are dedicated to enhancing community living through thoughtful planning, voluntary compliance, and perhaps a few gentle reminders about aesthetic standards. Join us in shaping a brighter, more cohesive future for Slab City – one neatly organized lot at a time.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section bg-gray-100 py-16 px-4 min-h-screen flex items-center">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2">About Our Vision</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    The Slab City HOA was established by a forward-thinking group of Slabbers who, after much deliberation (and a particularly windy dust storm that rearranged several "art installations"), recognized the subtle need for... well, *some* sort of collective agreement. Our mission is to gently introduce concepts of shared responsibility, infrastructure development (theoretical, for now), and communal aesthetics.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    We understand that "freedom" is a cornerstone of Slab City's charm. Rest assured, our guidelines are designed to enhance, not inhibit, this spirit. Think of us as benevolent guardians of curb appeal and responsible resource management. We're here to ensure that your pursuit of an alternative lifestyle is as comfortable and, dare we say, *organized* as possible.
+                </p>
+                <p class="text-lg text-gray-700">
+                    We operate on principles of transparency, optional participation (strongly encouraged), and the belief that even the most free-spirited communities can benefit from a quarterly newsletter.
+                </p>
+            </div>
+        </section>
+
+        <!-- Rules & Regulations Section -->
+        <section id="rules" class="section bg-gradient-to-br from-red-100 to-rose-200 py-16 px-4 min-h-screen flex items-center">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2">Slab City HOA: Community Guidelines</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    To maintain the serene and aesthetically pleasing environment that defines our unique community, the Slab City HOA kindly requests adherence to the following voluntary, yet highly recommended, guidelines:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Structure & Aesthetic Harmony</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>All new "art installations" exceeding 10 feet in height or width require a pre-approved permit from the Architectural Review Committee (ARC).</li>
+                            <li>Visible outdoor plumbing must be neatly enclosed or painted in a desert-appropriate neutral tone.</li>
+                            <li>The use of mismatched tires as structural elements for residences is discouraged unless painted a consistent shade of "Desert Taupe" or "Cactus Green."</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Noise & Nuisance Management</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Generators operating between 10:00 PM and 7:00 AM must be housed in sound-dampening enclosures.</li>
+                            <li>Spontaneous musical performances exceeding 80 decibels must conclude by 9:00 PM, unless a "Community Jam Session" permit has been acquired.</li>
+                            <li>Rooster crowing is permitted only between sunrise and 9:00 AM. (We're working on a "Rooster Zoning" initiative).</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Resource Stewardship</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Greywater runoff must be directed to designated, permeable areas, not directly onto public pathways or neighbor's "lots."</li>
+                            <li>All non-compostable waste must be secured in sealed containers to prevent wind-borne dissemination across the community.</li>
+                            <li>Solar panel arrays must be cleaned quarterly to maximize efficiency and minimize visual clutter.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. Pet & Livestock Conduct</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Free-ranging chickens are delightful, but owners are responsible for ensuring they do not disturb neighboring "properties" or access the communal compost heap without supervision.</li>
+                            <li>All domesticated animals must be contained or leashed when traversing main community thoroughfares.</li>
+                            <li>Goats are charming, but their foraging must be confined to their owner's allocated "territory."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-700 mt-6 italic">
+                    Violation notices will be delivered via a politely worded note placed under a rock near your dwelling. Repeated non-compliance may result in a sternly worded follow-up, or in extreme cases, the temporary re-homing of particularly noisy roosters.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-gray-100 py-16 px-4 min-h-screen flex items-center">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-green-500 pb-2">HOA Services (Aspirational)</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    While "services" in Slab City are typically self-provided or bartered, your Slab City HOA is actively developing a suite of optional (but highly beneficial!) programs for a nominal, voluntary contribution:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Scheduled "Trash Collection"</h3>
+                        <p class="text-gray-700">
+                            A weekly (weather permitting) collection service for properly sorted, non-hazardous waste. Bins are provided on a "first-come, first-served, or if we find one" basis. (Every Tuesday, approximately between 9 AM and 4 PM, or whenever the truck gets unstuck.)
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">"Infrastructure" Enhancement</h3>
+                        <p class="text-gray-700">
+                            Our dedicated (and often sole) "Infrastructure Specialist" periodically assesses and, where feasible, addresses critical pathway irregularities. Potholes filled with interesting desert finds!
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Community "Beautification" Initiatives</h3>
+                        <p class="text-gray-700">
+                            Volunteer-led projects to enhance communal areas, including occasional graffiti art moderation (with prior artist consent) and strategically placed desert flora. Bring your own shovel and creativity!
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Quarterly "Town Hall" Meetings</h3>
+                        <p class="text-gray-700">
+                            Join us under the big shade tree (location TBD, depending on sun angle) for spirited discussions on community well-being, proposed rule amendments, and the latest desert gossip. Potluck highly encouraged.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gradient-to-br from-blue-100 to-indigo-200 py-16 px-4 min-h-screen flex items-center">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Contact the HOA Board</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Have a burning question about your property lines? Want to report a particularly egregious flamingo statue? Or perhaps you just want to volunteer for the "Roadside Relocation Committee"? We're here to (eventually) help!
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">General Inquiries:</h3>
+                        <p class="text-lg text-gray-700">
+                            <strong>Email:</strong> <a href="mailto:info@slabcityhoa.org" class="text-blue-600 hover:underline">info@slabcityhoa.org</a> (Monitored bi-weekly, or when the satellite dish gets signal.)
+                        </p>
+                        <p class="text-lg text-gray-700 mt-4">
+                            <strong>Physical Mail:</strong> No fixed address. Please send pigeons. Or leave a note under the big rock by the old bus.
+                        </p>
+                        <p class="text-lg text-gray-700 mt-4">
+                            <strong>HOA Office Hours:</strong> Irregular. Best to catch us at the water station around noon, or at the evening bonfire.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Board Members (Rotating Basis):</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>"The Enforcer" Eddy:</strong> Specializes in noise complaints and proper flag etiquette.</li>
+                            <li><strong>"Madame Meticulous" Maya:</strong> Oversees aesthetic compliance and "renegade" garden plots.</li>
+                            <li><strong>"Barter" Bob:</strong> Treasurer and community resource allocation specialist.</li>
+                            <li><strong>"Desert Dreamer" Deb:</strong> Head of community vision and abstract planning.</li>
+                        </ul>
+                        <p class="text-lg text-gray-700 mt-4 italic">
+                            Disclaimer: Board members may be unavailable due to "wandering," "artistic inspiration," or "evading responsibility."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 p-8 text-center rounded-t-lg shadow-inner">
+        <p>&copy; 2025 Slab City HOA. All rights reserved. (Terms & Conditions apply to those who acknowledge them.)</p>
+        <p class="text-sm mt-2">The "Last Free Place" is now mildly organized. You're welcome.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active navigation link based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                // Adjust for fixed header height
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Set initial active link on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstSectionId = sections[0].getAttribute('id');
+            document.querySelector(`a[href="#${firstSectionId}"]`).classList.add('active');
+        });
+
+    </script>
+</body>
+</html>
