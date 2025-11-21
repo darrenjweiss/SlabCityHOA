@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slab City HOA - The Last Regulated Place on Earth</title>
-    <!-- Tailwind CSS CDN -->
+    <meta name="description" content="Bringing structure and slightly enforced guidelines to Slab City, 'The Last Free Place.' Voluntary compliance starts here.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,10 +18,11 @@
             padding-top: 80px; /* Offset for fixed header */
             margin-top: -80px; /* Compensate for padding-top to keep content aligned */
         }
+        /* A11y Improvement: Increased contrast for active link (from #a0aec0 to #fcd34d) */
         .nav-link.active {
             font-weight: bold;
-            color: #a0aec0; /* Lighter gray for active state */
-            border-bottom: 2px solid #a0aec0;
+            color: #fcd34d; 
+            border-bottom: 2px solid #fcd34d;
         }
         /* Custom scrollbar for aesthetics */
         ::-webkit-scrollbar {
@@ -41,26 +43,39 @@
 </head>
 <body class="scroll-smooth">
 
-    <!-- Fixed Header / Navigation Bar -->
-    <header class="bg-gray-800 text-white p-4 fixed w-full z-10 shadow-md rounded-b-lg">
-        <nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="text-2xl font-bold mb-2 sm:mb-0">
+    <header class="bg-gray-800 text-white p-4 fixed w-full z-20 shadow-md rounded-b-lg" role="banner">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
                 Slab City HOA
             </div>
-            <ul class="flex space-x-4">
-                <li><a href="#home" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a></li>
-                <li><a href="#about" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a></li>
-                <li><a href="#rules" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a></li>
-                <li><a href="#services" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a></li>
-                <li><a href="#contact" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a></li>
+            
+            <button id="menu-button" class="sm:hidden text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition duration-300" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="nav-menu-desktop" class="hidden sm:flex space-x-4" aria-label="Desktop Main Navigation">
+                <a href="#home" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a>
+                <a href="#rules" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a>
+            </nav>
+        </div>
+
+        <nav id="nav-menu-mobile" class="sm:hidden mt-2 bg-gray-700/90 rounded-md hidden" aria-label="Mobile Main Navigation">
+            <ul class="flex flex-col space-y-2 p-3">
+                <li><a href="#home" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a></li>
+                <li><a href="#about" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a></li>
+                <li><a href="#rules" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a></li>
+                <li><a href="#services" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a></li>
+                <li><a href="#contact" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="pt-20"> <!-- Padding to push content below the fixed header -->
-
-        <!-- Home Section -->
-        <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-20 px-4 min-h-screen flex items-center justify-center text-center">
+    <main class="pt-20" role="main"> <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-20 px-4 min-h-screen flex items-center justify-center text-center">
             <div class="max-w-4xl mx-auto p-8 bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                     Welcome to the Slab City Homeowners Association
@@ -69,8 +84,7 @@
                     Bringing structure, harmony, and *slightly* enforced guidelines to "The Last Free Place."
                 </p>
                 <div class="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden border-4 border-gray-300">
-                    <!-- IMPORTANT: Please replace YOUR_GITHUB_USERNAME and YOUR_REPOSITORY_NAME with your actual GitHub username and repository name for the image to display. -->
-                    <img src="https://raw.githubusercontent.com/darrenjweiss/SlabCityHOA/main/Front%20Gate2.png" alt="Slab City HOA Front Gate" class="w-full h-auto object-cover rounded-md">
+                    <img src="https://raw.githubusercontent.com/darrenjweiss/SlabCityHOA/main/Front%20Gate2.png" alt="Conceptual image of the Slab City HOA Front Gate with a security arm." class="w-full h-auto object-cover rounded-md">
                     <p class="text-sm text-gray-500 p-2 italic">A conceptual rendering of your future, more organized, entrance.</p>
                 </div>
                 <p class="text-lg text-gray-700 mt-8">
@@ -79,7 +93,6 @@
             </div>
         </section>
 
-        <!-- About Us Section -->
         <section id="about" class="section bg-gray-100 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2">About Our Vision</h2>
@@ -95,7 +108,6 @@
             </div>
         </section>
 
-        <!-- Rules & Regulations Section -->
         <section id="rules" class="section bg-gradient-to-br from-red-100 to-rose-200 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2">Slab City HOA: Community Guidelines</h2>
@@ -147,7 +159,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="section bg-gray-100 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-green-500 pb-2">HOA Services (Aspirational)</h2>
@@ -187,7 +198,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section bg-gradient-to-br from-blue-100 to-indigo-200 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Contact the HOA Board</h2>
@@ -226,14 +236,28 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 p-8 text-center rounded-t-lg shadow-inner">
+    <footer class="bg-gray-800 text-gray-400 p-8 text-center rounded-t-lg shadow-inner" role="contentinfo">
         <p>&copy; 2025 Slab City HOA. All rights reserved. (Terms & Conditions apply to those who acknowledge them.)</p>
         <p class="text-sm mt-2">The "Last Free Place" is now mildly organized. You're welcome.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+
+        // Function to set the active link
+        function setActiveLink(currentSectionId) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation and closes mobile menu
         document.querySelectorAll('a.nav-link').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -241,36 +265,39 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+
+                // Close mobile menu after clicking a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
             });
         });
 
-        // Highlight active navigation link based on scroll position
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Toggle mobile navigation menu
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
+        // Highlight active navigation link based on scroll position
         window.addEventListener('scroll', () => {
-            let current = '';
+            let current = 'home'; // Default to home
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                // Adjust for fixed header height
-                if (pageYOffset >= sectionTop - 100) {
+                // Adjusted offset for fixed header and smoother activation
+                if (pageYOffset >= sectionTop - 120) { 
                     current = section.getAttribute('id');
                 }
             });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
+            setActiveLink(current);
         });
 
         // Set initial active link on page load
         document.addEventListener('DOMContentLoaded', () => {
-            const firstSectionId = sections[0].getAttribute('id');
-            document.querySelector(`a[href="#${firstSectionId}"]`).classList.add('active');
+            // Check for a hash in the URL, otherwise default to 'home'
+            const initialHash = window.location.hash ? window.location.hash.substring(1) : 'home';
+            setActiveLink(initialHash);
         });
 
     </script>
