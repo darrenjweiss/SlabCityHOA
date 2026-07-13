@@ -6,7 +6,10 @@
     <title>Slab City HOA - The Last Regulated Place on Earth</title>
     <!-- SEO Improvement -->
     <meta name="description" content="Bringing structure and slightly enforced guidelines to Slab City, 'The Last Free Place.' Voluntary compliance starts here.">
-    
+
+    <!-- Favicon (inline SVG data URI - a simple desert/sun motif, no external file needed) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23fcd34d%22/><circle cx=%2250%22 cy=%2242%22 r=%2222%22 fill=%22%23f97316%22/><rect x=%2210%22 y=%2270%22 width=%2280%22 height=%2210%22 fill=%22%232d3748%22/></svg>">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +26,7 @@
         /* A11y Improvement: Increased contrast for active link (from #a0aec0 to #fcd34d) */
         .nav-link.active {
             font-weight: bold;
-            color: #fcd34d; 
+            color: #fcd34d;
             border-bottom: 2px solid #fcd34d;
         }
         /* Custom scrollbar for aesthetics */
@@ -48,9 +51,36 @@
         details summary::marker {
             display: none;
         }
+        /* Chevron indicator for expandable minutes entries */
+        details summary .chevron {
+            display: inline-block;
+            transition: transform 0.2s ease;
+            font-family: monospace;
+        }
+        details[open] summary .chevron {
+            transform: rotate(90deg);
+        }
+        /* Skip link: visually hidden until focused */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #fcd34d;
+            color: #1a202c;
+            padding: 0.75rem 1.25rem;
+            font-weight: 700;
+            z-index: 50;
+            border-radius: 0 0 0.5rem 0;
+        }
+        .skip-link:focus {
+            left: 0;
+        }
     </style>
 </head>
 <body class="scroll-smooth">
+
+    <!-- Skip to main content link (A11y Improvement) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Fixed Header / Navigation Bar (A11y Improvement: role="banner") -->
     <header class="bg-gray-800 text-white p-4 fixed w-full z-20 shadow-md rounded-b-lg" role="banner">
@@ -58,9 +88,9 @@
             <div class="text-2xl font-bold">
                 Slab City HOA
             </div>
-            
+
             <!-- Hamburger Button (Mobile Only) -->
-            <button id="menu-button" class="sm:hidden text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition duration-300" aria-label="Toggle navigation menu">
+            <button id="menu-button" class="sm:hidden text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition duration-300" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu-mobile">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -92,7 +122,7 @@
         </nav>
     </header>
 
-    <main class="pt-20" role="main"> <!-- Padding to push content below the fixed header -->
+    <main id="main-content" class="pt-20" role="main"> <!-- Padding to push content below the fixed header -->
 
         <!-- Home Section -->
         <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-16 px-4 min-h-screen flex items-center justify-center text-center">
@@ -105,7 +135,7 @@
                 </p>
                 <div class="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden border-4 border-gray-300">
                     <!-- Image alt text is descriptive, helping A11y -->
-                    <img src="https://raw.githubusercontent.com/darrenjweiss/SlabCityHOA/main/Front%20Gate2.png" alt="Conceptual image of the Slab City HOA Front Gate with a security arm." class="w-full h-auto object-cover rounded-md">
+                    <img src="https://raw.githubusercontent.com/darrenjweiss/SlabCityHOA/main/Front%20Gate2.png" alt="Conceptual image of the Slab City HOA Front Gate with a security arm." class="w-full h-auto object-cover rounded-md" loading="lazy">
                     <p class="text-sm text-gray-500 p-2 italic">A conceptual rendering of your future, more organized, entrance.</p>
                 </div>
                 <p class="text-lg text-gray-700 mt-8">
@@ -221,7 +251,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Minutes Section (Completed) -->
         <section id="minutes" class="section bg-gradient-to-br from-indigo-50 to-purple-100 py-16 px-4 flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-2xl border border-gray-200">
@@ -234,7 +264,7 @@
                     <!-- Q4 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2025: "The Generator Noise Level Optimization Session"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q4 2025: "The Generator Noise Level Optimization Session"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: The Fridge Bus (Air-Conditioned for 12 minutes)</p>
@@ -253,7 +283,7 @@
                     <!-- Q3 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2025: "Inauguration of the Roadside Relocation Committee"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q3 2025: "Inauguration of the Roadside Relocation Committee"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Behind Salvation Mountain (East Side, good cellular connection)</p>
@@ -272,7 +302,7 @@
                     <!-- Q2 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2025: "The Unsanctioned Compost Heap Crisis"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q2 2025: "The Unsanctioned Compost Heap Crisis"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: The Shade Tree (Shade was adequate)</p>
@@ -291,7 +321,7 @@
                     <!-- Q1 2025 (Completed) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2025: "Annual Vision Casting and Abstract Planning Retreat"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q1 2025: "Annual Vision Casting and Abstract Planning Retreat"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Anywhere with a view of the sunset (Moving Target)</p>
@@ -306,11 +336,11 @@
                             <p class="text-gray-700">Resolution 2025-Q1.D: Eddy and Maya will attempt to locate paint supplies. The board agreed to reconvene upon successful execution of the primary strategic goal (repainting the sign).</p>
                         </div>
                     </details>
-                    
+
                     <!-- Q4 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2024: "The Great Christmas Light Debate"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q4 2024: "The Great Christmas Light Debate"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Abandoned concrete pad next to the Salton Sea vista.</p>
@@ -329,7 +359,7 @@
                     <!-- Q3 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2024: "The Official Slab City Slogan Discussion"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q3 2024: "The Official Slab City Slogan Discussion"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Bob's new tent (surprisingly structurally sound).</p>
@@ -344,11 +374,11 @@
                             <p class="text-gray-700">Resolution 2024-Q3.B: The Slab City HOA shall adopt the official, legally binding slogan: *[Abruptly stopped writing due to an unexpected visitor]*. Slogan postponed indefinitely.</p>
                         </div>
                     </details>
-                    
+
                     <!-- Q2 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2024: "The Great Tire Painting Initiative Review"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q2 2024: "The Great Tire Painting Initiative Review"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: The communal fire pit (pre-emptively extinguished).</p>
@@ -363,11 +393,11 @@
                             <p class="text-gray-700">Resolution 2024-Q2.C: The "Bold Color Surcharge" is established. Enforcement will rely on the honor system, or if Eddy happens to be passing by and has time.</p>
                         </div>
                     </details>
-                    
+
                     <!-- Q1 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2024: "The Introduction of the ARC (Architectural Review Committee)"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q1 2024: "The Introduction of the ARC (Architectural Review Committee)"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Under a canvas awning that needed ARC approval.</p>
@@ -382,11 +412,11 @@
                             <p class="text-gray-700">Resolution 2024-Q1.D: The ARC is founded (Chair: Maya). The meeting was adjourned suddenly when the non-compliant awning collapsed due to a moderate breeze. All minutes were salvaged.</p>
                         </div>
                     </details>
-                    
+
                     <!-- Q4 2023 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2023: "The Inaugural Meeting & Declaration of Intent"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q4 2023: "The Inaugural Meeting & Declaration of Intent"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Near the old concrete foundation (Historically Significant Spot).</p>
@@ -401,11 +431,11 @@
                             <p class="text-gray-700">Resolution 2023-Q4.A: Slab City HOA officially established. Bob was appointed Treasurer and tasked with creating the Dues Collection Policy (DCP). The flag rule passed unanimously.</p>
                         </div>
                     </details>
-                    
+
                     <!-- Q3 2023 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2023: "Pre-Formation Meeting: Conceptualizing Order"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q3 2023: "Pre-Formation Meeting: Conceptualizing Order"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Unclear (Somewhere windy and dusty).</p>
@@ -423,7 +453,7 @@
                     <!-- Q2 2023 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2023: "Informal Gathering on Shared Community Anxiety"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q2 2023: "Informal Gathering on Shared Community Anxiety"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: Near the old water tower.</p>
@@ -441,7 +471,7 @@
                     <!-- Q1 2023 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2023: "The Idea Germination Session"
+                            <span class="chevron font-mono text-purple-700 pr-2">&gt;</span> Q1 2023: "The Idea Germination Session"
                         </summary>
                         <div class="p-6 bg-white/90">
                             <p class="font-semibold mb-2">Location: The future site of the HOA's first proposed shade structure.</p>
@@ -458,7 +488,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Contact Section -->
         <section id="contact" class="section bg-gradient-to-br from-blue-100 to-indigo-200 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
@@ -500,7 +530,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 p-8 text-center rounded-t-lg shadow-inner" role="contentinfo">
-        <p>&copy; 2025 Slab City HOA. All rights reserved. (Terms & Conditions apply to those who acknowledge them.)</p>
+        <p>&copy; <span id="current-year"></span> Slab City HOA. All rights reserved. (Terms & Conditions apply to those who acknowledge them.)</p>
         <p class="text-sm mt-2">The "Last Free Place" is now mildly organized. You're welcome.</p>
     </footer>
 
@@ -530,15 +560,36 @@
                 });
 
                 // Close mobile menu after clicking a link
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
+                closeMobileMenu();
             });
         });
 
-        // Toggle mobile navigation menu
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // Toggle mobile navigation menu, keeping aria-expanded in sync (A11y fix)
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        menuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isNowHidden = mobileMenu.classList.toggle('hidden');
+            menuButton.setAttribute('aria-expanded', String(!isNowHidden));
+        });
+
+        // Close mobile menu when clicking/tapping outside of it
+        document.addEventListener('click', (e) => {
+            const clickedInsideMenu = mobileMenu.contains(e.target);
+            const clickedButton = menuButton.contains(e.target);
+            if (!clickedInsideMenu && !clickedButton && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+            }
         });
 
         // Highlight active navigation link based on scroll position
@@ -548,10 +599,16 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 // Adjusted offset for fixed header and smoother activation
-                if (pageYOffset >= sectionTop - 120) { 
+                if (pageYOffset >= sectionTop - 120) {
                     current = section.getAttribute('id');
                 }
             });
+
+            // Edge case fix: if scrolled to the very bottom of the page, force the last section active
+            const scrolledToBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2;
+            if (scrolledToBottom && sections.length > 0) {
+                current = sections[sections.length - 1].getAttribute('id');
+            }
 
             setActiveLink(current);
         });
@@ -561,9 +618,11 @@
             // Check for a hash in the URL, otherwise default to 'home'
             const initialHash = window.location.hash ? window.location.hash.substring(1) : 'home';
             setActiveLink(initialHash);
+
+            // Dynamic copyright year fix
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
 
     </script>
 </body>
 </html>
-
