@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slab City HOA - The Last Regulated Place on Earth</title>
+    <!-- SEO Improvement -->
     <meta name="description" content="Bringing structure and slightly enforced guidelines to Slab City, 'The Last Free Place.' Voluntary compliance starts here.">
     
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -50,41 +52,50 @@
 </head>
 <body class="scroll-smooth">
 
+    <!-- Fixed Header / Navigation Bar (A11y Improvement: role="banner") -->
     <header class="bg-gray-800 text-white p-4 fixed w-full z-20 shadow-md rounded-b-lg" role="banner">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold">
                 Slab City HOA
             </div>
             
+            <!-- Hamburger Button (Mobile Only) -->
             <button id="menu-button" class="sm:hidden text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition duration-300" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
 
+            <!-- Desktop Navigation Links (A11y Improvement: aria-label) -->
             <nav id="nav-menu-desktop" class="hidden sm:flex space-x-4" aria-label="Desktop Main Navigation">
                 <a href="#home" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a>
                 <a href="#about" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a>
                 <a href="#rules" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a>
                 <a href="#services" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a>
+                <!-- New Navigation Link -->
                 <a href="#minutes" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Minutes</a>
                 <a href="#contact" class="nav-link text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a>
             </nav>
         </div>
 
+        <!-- Mobile Menu - Collapsible (Starts Hidden) -->
         <nav id="nav-menu-mobile" class="sm:hidden mt-2 bg-gray-700/90 rounded-md hidden" aria-label="Mobile Main Navigation">
             <ul class="flex flex-col space-y-2 p-3">
                 <li><a href="#home" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Home</a></li>
                 <li><a href="#about" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">About Us</a></li>
                 <li><a href="#rules" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Rules & Regulations</a></li>
                 <li><a href="#services" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Services</a></li>
+                <!-- New Mobile Link -->
                 <li><a href="#minutes" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Minutes</a></li>
                 <li><a href="#contact" class="nav-link block text-gray-300 hover:text-gray-100 transition duration-300 rounded-md p-2">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="pt-20" role="main"> <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-16 px-4 min-h-screen flex items-center justify-center text-center">
+    <main class="pt-20" role="main"> <!-- Padding to push content below the fixed header -->
+
+        <!-- Home Section -->
+        <section id="home" class="section bg-gradient-to-br from-yellow-100 to-orange-200 py-16 px-4 min-h-screen flex items-center justify-center text-center">
             <div class="max-w-4xl mx-auto p-8 bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                     Welcome to the Slab City Homeowners Association
@@ -93,6 +104,7 @@
                     Bringing structure, harmony, and *slightly* enforced guidelines to "The Last Free Place."
                 </p>
                 <div class="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden border-4 border-gray-300">
+                    <!-- Image alt text is descriptive, helping A11y -->
                     <img src="https://raw.githubusercontent.com/darrenjweiss/SlabCityHOA/main/Front%20Gate2.png" alt="Conceptual image of the Slab City HOA Front Gate with a security arm." class="w-full h-auto object-cover rounded-md">
                     <p class="text-sm text-gray-500 p-2 italic">A conceptual rendering of your future, more organized, entrance.</p>
                 </div>
@@ -102,6 +114,7 @@
             </div>
         </section>
 
+        <!-- About Us Section -->
         <section id="about" class="section bg-gray-100 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2">About Our Vision</h2>
@@ -117,6 +130,7 @@
             </div>
         </section>
 
+        <!-- Rules & Regulations Section -->
         <section id="rules" class="section bg-gradient-to-br from-red-100 to-rose-200 py-16 px-4 min-h-screen flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2">Slab City HOA: Community Guidelines</h2>
@@ -168,6 +182,7 @@
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="section bg-gray-100 py-16 px-4 flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-green-500 pb-2">HOA Services (Aspirational)</h2>
@@ -207,6 +222,7 @@
             </div>
         </section>
         
+        <!-- Minutes Section (Completed) -->
         <section id="minutes" class="section bg-gradient-to-br from-indigo-50 to-purple-100 py-16 px-4 flex items-center">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-2xl border border-gray-200">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-purple-500 pb-2">HOA Board Meeting Minutes: A History of Decision-Making</h2>
@@ -215,42 +231,7 @@
                 </p>
 
                 <div class="space-y-4">
-                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
-                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2026: "The Great Solar Glare & Rooster Relocation Protocol"
-                        </summary>
-                        <div class="p-6 bg-white/90">
-                            <p class="font-semibold mb-2">Location: The Shade Tree (Moving dynamically to escape the sun)</p>
-                            <p class="text-sm italic mb-4">Attendees: Eddy, Maya, Bob, Deb.</p>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>**Solar Panel Misalignment:** Maya presented complaints that Bob’s new high-efficiency solar array was reflecting a blinding laser beam directly into Eddy’s camper van at 4:00 PM daily. Bob offered a cardboard shield but requested a trade in propane.</li>
-                                <li>**Rooster Crowing Boundaries:** Eddy noted that despite warnings, several roosters have completely ignored the 9:00 AM curfew. Deb claimed the roosters were working within a "natural time-flow paradigm" and could not be regulated.</li>
-                                <li>**Community Outreach:** A proposal to print a physical newsletter was dismissed because nobody wanted to go to El Centro to buy paper.</li>
-                            </ul>
-                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
-                            <p class="text-gray-700">Resolution 2026-Q2.A: Bob is officially mandated to tilt his solar array 5 degrees north or cover it with a burlap sack after 3:30 PM. The rooster curfew enforcement is postponed until someone can invent an automatic, seed-dispensing alarm clock.</p>
-                        </div>
-                    </details>
-
-                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
-                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
-                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2026: "Annual Operational Budgeting and Stray Goat Zoning"
-                        </summary>
-                        <div class="p-6 bg-white/90">
-                            <p class="font-semibold mb-2">Location: Inside the broken RV with the intact awning</p>
-                            <p class="text-sm italic mb-4">Attendees: Eddy, Maya, Bob. Deb arrived late via bicycle.</p>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>**Treasury Review:** Bob confirmed the HOA treasury currently holds $4.50 in loose change, half a bottle of sunscreen, and a highly valuable vintage license plate. Budget declared balanced and stable.</li>
-                                <li>**Goat Encroachment:** Maya raised a formal grievance regarding free-ranging goats eating unapproved structural cardboard from neighbor boundaries. </li>
-                                <li>**Speed Management:** Discussion on how to enforce the 5 MPH speed limit on main paths. Suggestions included strategic placement of particularly large decorative rocks.</li>
-                            </ul>
-                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
-                            <p class="text-gray-700">Resolution 2026-Q1.B: Cardboard structures must be sprayed with a vinegar mix to deter goat foraging. Eddy was authorized to reposition three heavy rocks onto Main Slab Road to act as organic speed bumps.</p>
-                        </div>
-                    </details>
-
+                    <!-- Q4 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2025: "The Generator Noise Level Optimization Session"
@@ -269,6 +250,7 @@
                         </div>
                     </details>
 
+                    <!-- Q3 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2025: "Inauguration of the Roadside Relocation Committee"
@@ -287,6 +269,7 @@
                         </div>
                     </details>
 
+                    <!-- Q2 2025 -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2025: "The Unsanctioned Compost Heap Crisis"
@@ -305,6 +288,7 @@
                         </div>
                     </details>
 
+                    <!-- Q1 2025 (Completed) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2025: "Annual Vision Casting and Abstract Planning Retreat"
@@ -323,6 +307,7 @@
                         </div>
                     </details>
                     
+                    <!-- Q4 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2024: "The Great Christmas Light Debate"
@@ -341,6 +326,7 @@
                         </div>
                     </details>
 
+                    <!-- Q3 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2024: "The Official Slab City Slogan Discussion"
@@ -359,6 +345,7 @@
                         </div>
                     </details>
                     
+                    <!-- Q2 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2024: "The Great Tire Painting Initiative Review"
@@ -377,6 +364,7 @@
                         </div>
                     </details>
                     
+                    <!-- Q1 2024 (New) -->
                     <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
                         <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
                             <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2024: "The Introduction of the ARC (Architectural Review Committee)"
@@ -388,27 +376,194 @@
                             <ul class="list-disc list-inside space-y-2 text-gray-700">
                                 <li>**ARC Formation:** Maya proposed the formation of the Architectural Review Committee to vet all structures over 10 feet.</li>
                                 <li>**First Review:** The Committee's first action was to review the awning they were meeting under. It was deemed non-compliant due to "unapproved flap length."</li>
-                                <li>**Permitting Process:** Deb suggested using structural clay or interesting bottles as currency for physical permit application fees.</li>
+                                <li>**Permitting Process:** Deb suggested the permitting process involve drawing the structure in the sand and having a quorum of three board members nod in agreement.</li>
                             </ul>
                             <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
-                            <p class="text-gray-700">Resolution 2024-Q1.A: The ARC is officially active. All future awnings must have an approved flap length. Meeting adjourned early due to high wind warnings.</p>
+                            <p class="text-gray-700">Resolution 2024-Q1.D: The ARC is founded (Chair: Maya). The meeting was adjourned suddenly when the non-compliant awning collapsed due to a moderate breeze. All minutes were salvaged.</p>
+                        </div>
+                    </details>
+                    
+                    <!-- Q4 2023 (New) -->
+                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
+                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
+                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q4 2023: "The Inaugural Meeting & Declaration of Intent"
+                        </summary>
+                        <div class="p-6 bg-white/90">
+                            <p class="font-semibold mb-2">Location: Near the old concrete foundation (Historically Significant Spot).</p>
+                            <p class="text-sm italic mb-4">Attendees: Eddy, Maya, Bob. Founding Member Deb arrived 45 minutes late carrying a jar of sun tea.</p>
+                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>**HOA Creation:** Formal declaration of the Slab City HOA's existence.</li>
+                                <li>**Initial Dues:** Bob proposed initial dues be set at "whatever you have on you, preferably something shiny."</li>
+                                <li>**First Rule:** Eddy suggested the first, most critical rule should be: "All flags must be flying in a structurally pleasing manner."</li>
+                            </ul>
+                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
+                            <p class="text-gray-700">Resolution 2023-Q4.A: Slab City HOA officially established. Bob was appointed Treasurer and tasked with creating the Dues Collection Policy (DCP). The flag rule passed unanimously.</p>
+                        </div>
+                    </details>
+                    
+                    <!-- Q3 2023 (New) -->
+                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
+                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
+                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q3 2023: "Pre-Formation Meeting: Conceptualizing Order"
+                        </summary>
+                        <div class="p-6 bg-white/90">
+                            <p class="font-semibold mb-2">Location: Unclear (Somewhere windy and dusty).</p>
+                            <p class="text-sm italic mb-4">Attendees: Eddy, Maya, and a passing snowbird who quickly departed.</p>
+                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>**The Catalyst:** Discussion centered around a particularly annoying dust devil that scattered belongings, highlighting the need for "structural resilience."</li>
+                                <li>**Idea Generation:** The concept of "formalized paperwork" was briefly raised, then dismissed as too cumbersome.</li>
+                            </ul>
+                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
+                            <p class="text-gray-700">Resolution 2023-Q3.B: Decide to reconvene when the wind dies down, and maybe bring Bob. (Pre-HOA action item: Buy more rope.)</p>
+                        </div>
+                    </details>
+
+                    <!-- Q2 2023 (New) -->
+                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
+                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
+                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q2 2023: "Informal Gathering on Shared Community Anxiety"
+                        </summary>
+                        <div class="p-6 bg-white/90">
+                            <p class="font-semibold mb-2">Location: Near the old water tower.</p>
+                            <p class="text-sm italic mb-4">Attendees: Maya, Deb. (Eddy was busy organizing his sock collection.)</p>
+                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>**Shared Concerns:** Focus on the growing proliferation of "found objects" that were migrating into communal pathways.</li>
+                                <li>**The Need for Rules:** Deb mused that perhaps having *one* rule would make everyone feel better, but then contradicted herself.</li>
+                            </ul>
+                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
+                            <p class="text-gray-700">Resolution 2023-Q2.C: No formal action taken. Both members agreed to think about it harder next quarter.</p>
+                        </div>
+                    </details>
+
+                    <!-- Q1 2023 (New) -->
+                    <details class="rounded-xl shadow-lg overflow-hidden border border-gray-300">
+                        <summary class="p-4 bg-purple-200 text-xl font-bold cursor-pointer hover:bg-purple-300 transition duration-150">
+                            <span class="font-mono text-purple-700 pr-2">&gt;</span> Q1 2023: "The Idea Germination Session"
+                        </summary>
+                        <div class="p-6 bg-white/90">
+                            <p class="font-semibold mb-2">Location: The future site of the HOA's first proposed shade structure.</p>
+                            <p class="text-sm italic mb-4">Attendees: Eddy (solo).</p>
+                            <h4 class="text-lg font-bold mb-2 text-gray-800">Discussion Points:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>**Foundational Concepts:** Eddy spoke into the desert air about the theoretical benefits of clearly defined property boundaries.</li>
+                                <li>**Self-Correction:** Eddy recorded a note that the idea of "mandatory composting" was perhaps "too ambitious for year one."</li>
+                            </ul>
+                            <h4 class="text-lg font-bold mt-4 mb-2 text-gray-800">Action Items & Resolutions:</h4>
+                            <p class="text-gray-700">Resolution 2023-Q1.D: Eddy resolved to find two other individuals who also liked making lists, thereby founding the initial quorum of the HOA.</p>
                         </div>
                     </details>
                 </div>
             </div>
         </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gradient-to-br from-blue-100 to-indigo-200 py-16 px-4 min-h-screen flex items-center">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Contact the HOA Board</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Have a burning question about your property lines? Want to report a particularly egregious flamingo statue? Or perhaps you just want to volunteer for the "Roadside Relocation Committee"? We're here to (eventually) help!
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">General Inquiries:</h3>
+                        <p class="text-lg text-gray-700">
+                            <strong>Email:</strong> <a href="mailto:SlabCityHOA@gmail.com" class="text-blue-600 hover:underline">SlabCityHOA@gmail.com</a> (Monitored bi-weekly, or when the satellite dish gets signal.)
+                        </p>
+                        <p class="text-lg text-gray-700 mt-4">
+                            <strong>Physical Mail:</strong> No fixed address. Please send pigeons. Or leave a note under the big rock by the old bus.
+                        </p>
+                        <p class="text-lg text-gray-700 mt-4">
+                            <strong>HOA Office Hours:</strong> Irregular. Best to catch us at the water station around noon, or at The Range on Saturday night during the open mic concert.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Board Members (Rotating Basis):</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>"The Enforcer" Eddy:</strong> Specializes in noise complaints and proper flag etiquette.</li>
+                            <li><strong>"Madame Meticulous" Maya:</strong> Oversees aesthetic compliance and "renegade" garden plots.</li>
+                            <li><strong>"Barter" Bob:</strong> Treasurer and community resource allocation specialist.</li>
+                            <li><strong>"Desert Dreamer" Deb:</strong> Head of community vision and abstract planning.</li>
+                        </ul>
+                        <p class="text-lg text-gray-700 mt-4 italic">
+                            Disclaimer: Board members may be unavailable due to "wandering," "artistic inspiration," or "evading responsibility."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer id="contact" class="bg-gray-800 text-gray-400 py-8 text-center">
-        <p>&copy; 2026 Slab City HOA. Voluntary compliance starts here.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 p-8 text-center rounded-t-lg shadow-inner" role="contentinfo">
+        <p>&copy; 2025 Slab City HOA. All rights reserved. (Terms & Conditions apply to those who acknowledge them.)</p>
+        <p class="text-sm mt-2">The "Last Free Place" is now mildly organized. You're welcome.</p>
     </footer>
 
     <script>
-        const btn = document.getElementById('menu-button');
-        const menu = document.getElementById('nav-menu-mobile');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+
+        // Function to set the active link
+        function setActiveLink(currentSectionId) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation and closes mobile menu
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
         });
+
+        // Toggle mobile navigation menu
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Highlight active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = 'home'; // Default to home
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Adjusted offset for fixed header and smoother activation
+                if (pageYOffset >= sectionTop - 120) { 
+                    current = section.getAttribute('id');
+                }
+            });
+
+            setActiveLink(current);
+        });
+
+        // Set initial active link on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check for a hash in the URL, otherwise default to 'home'
+            const initialHash = window.location.hash ? window.location.hash.substring(1) : 'home';
+            setActiveLink(initialHash);
+        });
+
     </script>
 </body>
 </html>
+
